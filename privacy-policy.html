@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="นโยบายความเป็นส่วนตัว — Warachat Khuntong" />
+  <title>นโยบายความเป็นส่วนตัว | Warachat Khuntong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="/" class="nav__logo">WK<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links">
+        <li><a href="/">หน้าแรก</a></li>
+        <li><a href="/privacy-policy.html">นโยบายความเป็นส่วนตัว</a></li>
+        <li><a href="/terms-of-service.html">ข้อกำหนดการใช้งาน</a></li>
+        <li><a href="/data-deletion.html">ลบข้อมูลผู้ใช้</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="legal-page">
+    <div class="container legal-page__content">
+      <h1>นโยบายความเป็นส่วนตัว (Privacy Policy)</h1>
+      <p class="legal-page__updated">อัปเดตล่าสุด: <span id="policy-updated"></span></p>
+
+      <p>
+        นโยบายนี้อธิบายวิธีที่ <strong id="policy-name"></strong> ("เรา") เก็บ ใช้ และปกป้องข้อมูลส่วนบุคคล
+        เมื่อคุณใช้งานเว็บไซต์ แอปพลิเคชัน หรือเกมของเรา รวมถึงผลิตภัณฑ์ที่เผยแพร่บน Facebook Instant Games
+      </p>
+
+      <h2>1. ข้อมูลที่เราเก็บรวบรวม</h2>
+      <ul>
+        <li>ข้อมูลโปรไฟล์จาก Facebook (เช่น ชื่อ รูปโปรไฟล์ Facebook User ID) เมื่อคุณเข้าสู่ระบบผ่าน Facebook</li>
+        <li>ข้อมูลการใช้งานเกมหรือแอป (คะแนน สถิติ การตั้งค่า)</li>
+        <li>ข้อมูลอุปกรณ์และเบราว์เซอร์ (ประเภทอุปกรณ์ ระบบปฏิบัติการ IP address โดยประมาณ)</li>
+        <li>ข้อมูลที่คุณส่งถึงเราโดยตรง เช่น อีเมลติดต่อ</li>
+      </ul>
+
+      <h2>2. วัตถุประสงค์ในการใช้ข้อมูล</h2>
+      <ul>
+        <li>ให้บริการเกม แอป และเว็บไซต์</li>
+        <li>บันทึกความคืบหน้าและคะแนนของผู้เล่น</li>
+        <li>ปรับปรุงผลิตภัณฑ์และแก้ไขข้อบกพร่อง</li>
+        <li>ตอบคำถามและให้การสนับสนุนลูกค้า</li>
+        <li>ปฏิบัติตามกฎหมายและข้อกำหนดของแพลตฟอร์ม</li>
+      </ul>
+
+      <h2>3. การแชร์ข้อมูล</h2>
+      <p>
+        เราไม่ขายข้อมูลส่วนบุคคลของคุณ เราอาจแชร์ข้อมูลกับผู้ให้บริการที่จำเป็น เช่น Meta (Facebook)
+        สำหรับการเข้าสู่ระบบและบริการ Instant Games หรือเมื่อกฎหมายกำหนด
+      </p>
+
+      <h2>4. การเก็บรักษาข้อมูล</h2>
+      <p>
+        เราเก็บข้อมูลเท่าที่จำเป็นสำหรับวัตถุประสงค์ที่ระบุ หรือตามระยะเวลาที่กฎหมายกำหนด
+        คุณสามารถขอลบข้อมูลได้ตามหน้า <a href="/data-deletion.html">คำแนะนำการลบข้อมูลผู้ใช้</a>
+      </p>
+
+      <h2>5. สิทธิของเจ้าของข้อมูล</h2>
+      <p>คุณมีสิทธิขอเข้าถึง แก้ไข หรือลบข้อมูลส่วนบุคคลของคุณ โดยติดต่อเราทางอีเมลด้านล่าง</p>
+
+      <h2>6. ติดต่อเรา</h2>
+      <p>
+        <strong id="policy-contact-name"></strong><br />
+        อีเมล: <a id="policy-email" href="#"></a><br />
+        เว็บไซต์: <a id="policy-website" href="#"></a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer" id="legal-footer"></footer>
+
+  <script src="js/site-config.js"></script>
+  <script>
+    document.getElementById("policy-name").textContent = SITE.legalName;
+    document.getElementById("policy-contact-name").textContent = SITE.legalName;
+    document.getElementById("policy-updated").textContent = SITE.lastUpdated;
+    document.getElementById("policy-email").textContent = SITE.email;
+    document.getElementById("policy-email").href = `mailto:${SITE.email}`;
+    document.getElementById("policy-website").textContent = SITE.website.replace("https://", "");
+    document.getElementById("policy-website").href = SITE.website;
+  </script>
+</body>
+</html>

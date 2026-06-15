@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="คำแนะนำการลบข้อมูลผู้ใช้ — Warachat Khuntong" />
+  <title>ลบข้อมูลผู้ใช้ | Warachat Khuntong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="/" class="nav__logo">WK<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links">
+        <li><a href="/">หน้าแรก</a></li>
+        <li><a href="/privacy-policy.html">นโยบายความเป็นส่วนตัว</a></li>
+        <li><a href="/terms-of-service.html">ข้อกำหนดการใช้งาน</a></li>
+        <li><a href="/data-deletion.html">ลบข้อมูลผู้ใช้</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="legal-page">
+    <div class="container legal-page__content">
+      <h1>คำแนะนำการลบข้อมูลผู้ใช้ (User Data Deletion)</h1>
+      <p class="legal-page__updated">อัปเดตล่าสุด: <span id="deletion-updated"></span></p>
+
+      <p>
+        หากคุณต้องการลบข้อมูลส่วนบุคคลที่เก็บไว้จากเกมหรือแอปของ
+        <strong id="deletion-name"></strong> กรุณาทำตามขั้นตอนด้านล่าง
+      </p>
+
+      <h2>วิธีขอลบข้อมูล</h2>
+      <ol>
+        <li>ส่งอีเมลถึงเราที่ <a id="deletion-email" href="#"></a></li>
+        <li>ระบุหัวข้ออีเมล: <strong>คำขอลบข้อมูลผู้ใช้ / Data Deletion Request</strong></li>
+        <li>แนบ Facebook User ID หรือชื่อโปรไฟล์ Facebook ที่ใช้ในเกม/แอป</li>
+        <li>ระบุชื่อเกมหรือแอปที่ต้องการลบข้อมูล (ถ้ามีหลายผลิตภัณฑ์)</li>
+      </ol>
+
+      <h2>ระยะเวลาดำเนินการ</h2>
+      <p>
+        เราจะดำเนินการลบข้อมูลภายใน 30 วันนับจากวันที่ได้รับคำขอที่สมบูรณ์
+        และแจ้งผลทางอีเมลเมื่อดำเนินการเสร็จสิ้น
+      </p>
+
+      <h2>ข้อมูลที่จะถูกลบ</h2>
+      <ul>
+        <li>ข้อมูลโปรไฟล์และตัวระบุผู้ใช้ (เช่น Facebook User ID)</li>
+        <li>คะแนน สถิติ และข้อมูลความคืบหน้าในเกม</li>
+        <li>ข้อมูลการตั้งค่าที่เกี่ยวข้องกับบัญชีของคุณ</li>
+      </ul>
+
+      <h2>ข้อมูลที่อาจเก็บต่อไป</h2>
+      <p>
+        เราอาจเก็บข้อมูลบางส่วนตามที่กฎหมายกำหนด เช่น บันทึกการทำธุรกรรมหรือข้อมูลที่จำเป็นต่อการปฏิบัติตามกฎหมาย
+      </p>
+
+      <h2>ติดต่อ</h2>
+      <p>
+        <strong id="deletion-contact-name"></strong><br />
+        อีเมล: <a id="deletion-email-footer" href="#"></a><br />
+        เว็บไซต์: <a id="deletion-website" href="#"></a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer" id="legal-footer"></footer>
+
+  <script src="js/site-config.js"></script>
+  <script>
+    document.getElementById("deletion-name").textContent = SITE.legalName;
+    document.getElementById("deletion-contact-name").textContent = SITE.legalName;
+    document.getElementById("deletion-updated").textContent = SITE.lastUpdated;
+    [document.getElementById("deletion-email"), document.getElementById("deletion-email-footer")].forEach((el) => {
+      el.textContent = SITE.email;
+      el.href = `mailto:${SITE.email}?subject=${encodeURIComponent("คำขอลบข้อมูลผู้ใช้ / Data Deletion Request")}`;
+    });
+    document.getElementById("deletion-website").textContent = SITE.website.replace("https://", "");
+    document.getElementById("deletion-website").href = SITE.website;
+  </script>
+</body>
+</html>

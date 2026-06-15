@@ -21,6 +21,7 @@
       </button>
       <ul class="nav__links">
         <li><a href="#about">เกี่ยวกับ</a></li>
+        <li><a href="#business">ธุรกิจ</a></li>
         <li><a href="#projects">โปรเจกต์</a></li>
         <li><a href="#contact">ติดต่อ</a></li>
       </ul>
@@ -84,6 +85,14 @@
       </div>
     </section>
 
+    <section class="business section" id="business">
+      <div class="container">
+        <h2 class="section__title">ข้อมูลธุรกิจ</h2>
+        <p class="section__subtitle">ข้อมูลสำหรับติดต่อและยืนยันตัวตนธุรกิจกับ Meta (Facebook)</p>
+        <div class="business__card" id="business-info"></div>
+      </div>
+    </section>
+
     <section class="projects section" id="projects">
       <div class="container">
         <h2 class="section__title">โปรเจกต์จาก GitHub</h2>
@@ -96,22 +105,21 @@
       <div class="container">
         <div class="contact__card">
           <h2 class="contact__title">ติดต่อ</h2>
-          <p class="contact__text">สนใจร่วมงานหรือมีคำถาม? ติดต่อผมได้ที่ GitHub</p>
-          <a href="https://github.com/BrzKung" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-            github.com/BrzKung
-          </a>
+          <p class="contact__text">สนใจร่วมงานหรือมีคำถาม? ติดต่อได้ทางอีเมลหรือ GitHub</p>
+          <div class="contact__actions">
+            <a href="mailto:warachat12345@gmail.com" class="btn btn--primary">warachat12345@gmail.com</a>
+            <a href="https://github.com/BrzKung" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+              github.com/BrzKung
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> Warachat Khuntong</p>
-      <a href="#top" class="footer__top">กลับขึ้นบน ↑</a>
-    </div>
-  </footer>
+  <footer class="footer" id="legal-footer"></footer>
 
+  <script src="js/site-config.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
